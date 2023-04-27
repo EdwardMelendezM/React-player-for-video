@@ -1,22 +1,16 @@
 import ReactPlayer from "react-player";
-import { useState, useRef } from 'react'
+import { useRef } from 'react'
 import "./App.css"
 import Container from "./components/Container";
 import PlayIcon from "./components/PlayIcon";
 
 
 const App = () => {
-  const [isAuth, setIsAuth] = useState(false);
   const ref = useRef(null)
   const handleClickOnPlay = () => {
     console.log(ref.current);
 
-    if (!isAuth) {
-      if (ref.current) {
-        console.log(ref.current);
-      }
-      return;
-    }
+
   }
   const handleClickOnPause = () => {
     console.log("Esto se pauseo");
