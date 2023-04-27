@@ -48,6 +48,7 @@ const App = () => {
       onStart={handleOnStart}
       pip
       playIcon={<PlayIcon />}
+      wrapper={Container}
     />
 
   );

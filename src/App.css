@@ -1,3 +1,11 @@
 .container {
   background-color: aquamarine;
+  padding: 18px;
+  width: 80%;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
