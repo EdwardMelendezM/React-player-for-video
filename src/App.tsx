@@ -1,6 +1,8 @@
 import ReactPlayer from "react-player";
 import { useState, useRef } from 'react'
 import "./App.css"
+import Container from "./components/Container";
+import PlayIcon from "./components/PlayIcon";
 
 
 const App = () => {
@@ -30,23 +32,24 @@ const App = () => {
 
     }, 2000);
     if (!ref.current) return
-    ref.current.playing = true
+
   }
   return (
-    <div className="container">
-      <ReactPlayer
-        url='/video.mp4'
-        controls
-        muted
-        onPause={handleClickOnPause}
-        onPlay={handleClickOnPlay}
-        ref={ref}
-        loop
-        onError={handleClickOnError}
-        light={true}
-        onStart={handleOnStart}
-      />
-    </div>
+    <ReactPlayer
+      url='/video.mp4'
+      controls
+      muted
+      onPause={handleClickOnPause}
+      onPlay={handleClickOnPlay}
+      ref={ref}
+      loop
+      onError={handleClickOnError}
+      light={<img src="./descarga.jpg" />}
+      onStart={handleOnStart}
+      pip
+      playIcon={<PlayIcon />}
+    />
+
   );
 }
 
